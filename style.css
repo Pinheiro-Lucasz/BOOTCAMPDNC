@@ -1,7 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+
+:root { /* comando para criar um padrão*/
+    --azul-dnc: #0c70f2;
+    --preto-dnc: #303030;
+    --cinza-dnc: #c9c9c9;
+    --fonte-padrao: 'inter';
+}
+
+
 body{
     margin: 0px; /* Margem Externa*/
     padding: 0px; /* Margem Interna*/
+
+    background: linear-gradient(180deg, rgba(12, 112, 242, 0.5) 19.91%, rgba(12, 112, 242, 0) 24.84%), #303030;
+    background-repeat: no-repeat;
 }
 #principal{
     width: 100%;
@@ -41,5 +55,84 @@ body{
     font-weight: 600;
     color: #ffff;
     box-shadow: 3px 2px 4px rgba(12,112,242,0.25);
+    cursor: pointer;
+}
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+header {
+    color: white;
+    font-family: var(--fonte-padrao);
+}
+header h1 {
+    text-transform: uppercase; /*para deixar um texto MAIUSCULO*/
+    font-size: 80px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-align: center;
+}
+header h2 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 100px;
+}
+header .invert {
+    background-color: black;
+    font-weight: bold;
+    padding: 5px;
+}
+
+/*Formulário*/
+form {
+    color: white;
+    font-family: var(--fonte-padrao);
+    font-size: 30px;
+    font-weight: 600;
+    width: 600px;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+form input {
+    border-radius: 10px;
+    border: 0px;
+    height: 30px;
+    font-size: 20px;
+    padding: 10px;
+}
+form label {
+    margin: 10px 0px 10px 0px;
+}
+form input::placeholder {
+    color: rgba(57, 57, 57, 0.5); /*Comando para trocar a cor do texto Placeholder*/
+}
+.checkbox-itens label {
+    font-size: 25px;
+}
+.checkbox-itens {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+input[type="checkbox"] { /* comando para estiilizar checkbox*/
+    transform: scale(1.7);
+}
+input[type="submit"] {
+    background-color: rgba(12, 112, 242, 0.9);
+    width: 100%;
+    height: 56px;
+    font-size: 32px;
+    color: white;
+    margin-top: 50px;
+    box-shadow: 0px 6px 4px rgba(12,112,242,0.25);
     cursor: pointer;
 }
